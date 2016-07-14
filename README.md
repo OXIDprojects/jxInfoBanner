@@ -2,6 +2,12 @@
 
 OXID eShop Extension for Displaying Messages on Top of all Pages
 
+  - Support of permanent display
+  - Support of date specific display
+  - Support of the themes Azure, Flow and RoxIVE
+
+The message texts are taken from CMS pages starting with 'jxinfobanner'.
+
 
 ## Setup ##
 

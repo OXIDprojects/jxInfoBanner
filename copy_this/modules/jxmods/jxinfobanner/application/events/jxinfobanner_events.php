@@ -34,6 +34,7 @@ class jxInfoBanner_Install
         $sLogPath = oxRegistry::get("oxConfig")->getConfigParam("sShopDir") . '/log/';
         $fh = fopen($sLogPath.'jxmods.log', "a+");
         
+    $sNewUid = oxUtilsObject::getInstance()->generateUID();
         $aSql[] = array(
             /*
                     "table"     => "jx404catches",

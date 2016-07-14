@@ -1,3 +1,3 @@
-[{include file="widget/header/jxinfobanner.tpl"}]
+[{include file="widget/header/jxinfobanner_flow.tpl"}]
 
 [{$smarty.block.parent}]
