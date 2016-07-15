@@ -35,20 +35,25 @@
     [{/oxifcontent}]
 [{/if}]
 
-<style>
-    #jxInfoBanner {
-        background-color: #ff8604;
-        color: white;
-        font-size: 1.2em;
-        border: 1px solid #ec6105;
-        border-radius: 4px;
-        padding: 4px;
-        margin-top: 2px;
-    }
-</style>
 
-[{if $jxActiveCmsFound}]
-    <div id="jxInfoBanner">
-        [{$oCont->oxcontents__oxcontent->value}]
-    </div>
+[{assign var="oConfig" value=$oViewConf->getConfig()}]
+
+[{if $oConfig->getConfigParam("sTheme") == "azure"}]
+    <style>
+        #jxInfoBanner {
+            background-color: #ff8604;
+            color: white;
+            font-size: 1.2em;
+            border: 1px solid #ec6105;
+            border-radius: 4px;
+            padding: 4px;
+            margin-top: 2px;
+        }
+    </style>
+    
+    [{if $jxActiveCmsFound}]
+        <div id="jxInfoBanner">
+            [{$oCont->oxcontents__oxcontent->value}]
+        </div>
+    [{/if}]
 [{/if}]

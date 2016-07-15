@@ -27,7 +27,7 @@ $aModule = array(
                                 . '<li>Date specific display</ul>',
                         ),
     'thumbnail'    => 'jxinfobanner.png',
-    'version'      => '0.1.0',
+    'version'      => '0.1.2',
     'author'       => 'Joachim Barthel',
     'url'          => 'https://github.com/job963/jxInfoBanner',
     'email'        => 'jobarthel@gmail.com',
