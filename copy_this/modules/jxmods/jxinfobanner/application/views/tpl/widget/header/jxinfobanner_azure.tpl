@@ -9,22 +9,32 @@
     [{/if}]
 [{/oxifcontent}]
 
-[{* Check if holiday banner exists and is active *}]
-[{*
-[{assign var='jxHolidays' value=','|explode:"newyearsday,epiphany,laborday,xmas24,xmas25,xmas26,newyearseve"}]
-[{foreach from=$jxHolidays item=jxHoliday}]
-    [{assign var="jxInfobanner" value="jxinfobanner_"|cat:$jxHoliday}]
-    [{oxifcontent ident=$jxInfobanner object="oCont"}]
+
+[{* Nothing found yet, check if a range banner exists and is active *}]
+[{if ! $jxActiveCmsFound}]
+    [{oxifcontent ident="jxinfobanner_range" object="oCont"}]
         [{if $oCont->oxcontents__oxactive->value}]
-            [{if $jxHoliday="newyearsday" && "0101"=$jxToday|substr:-4 }]
-                [{assign var="jxActiveCmsFound" value=true}]
-            [{elseif  $jxHoliday="newyearsday" && "0106"=$jxToday|substr:-4 }]
+            [{assign var="jxBegin" value=$oCont->oxcontents__oxtitle->rawValue|substr:0:8}]        
+            [{assign var="jxEnd" value=$oCont->oxcontents__oxtitle->rawValue|substr:-8}]
+            [{if $jxBegin <= $jxToday and $jxEnd >= $jxToday}]
                 [{assign var="jxActiveCmsFound" value=true}]
             [{/if}]
         [{/if}]
     [{/oxifcontent}]
-[{/foreach}]
-*}]
+[{/if}]
+
+
+[{* Nothing found yet, check if repeating date exists and is active *}]
+[{if ! $jxActiveCmsFound}]
+    [{assign var="jxToday" value=$smarty.now|date_format:"%m%d"}]
+    [{assign var="jxInfobanner" value="jxinfobanner_"|cat:$jxToday}]
+    [{oxifcontent ident=$jxInfobanner object="oCont"}]
+        [{if $oCont->oxcontents__oxactive->value}]
+            [{assign var="jxActiveCmsFound" value=true}]
+        [{/if}]
+    [{/oxifcontent}]
+[{/if}]
+
 
 [{* Nothing found yet, check if default banner exists and is active *}]
 [{if ! $jxActiveCmsFound}]
