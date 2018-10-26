@@ -34,12 +34,11 @@ $aModule = array(
     'extend'       => array(
                         ),
     'files'        => array(
-                            'jxinfobanner_events' => 'jxmods/jxinfobanner/application/events/jxinfobanner_events.php'
                         ),
     'templates'     => array(
-                            'widget/header/jxinfobanner_azure.tpl'  => 'jxmods/jxinfobanner/application/views/tpl/widget/header/jxinfobanner_azure.tpl',
-                            'widget/header/jxinfobanner_flow.tpl'   => 'jxmods/jxinfobanner/application/views/tpl/widget/header/jxinfobanner_flow.tpl',
-                            'widget/header/jxinfobanner_roxive.tpl' => 'jxmods/jxinfobanner/application/views/tpl/widget/header/jxinfobanner_roxive.tpl'
+                            'widget/header/jxinfobanner_azure.tpl'  => 'jxmods/jxinfobanner/application/views/widget/header/jxinfobanner_azure.tpl',
+                            'widget/header/jxinfobanner_flow.tpl'   => 'jxmods/jxinfobanner/application/views/widget/header/jxinfobanner_flow.tpl',
+                            'widget/header/jxinfobanner_roxive.tpl' => 'jxmods/jxinfobanner/application/views/widget/header/jxinfobanner_roxive.tpl'
                         ),
     'blocks'        => array(
                             array(  /* Azure Theme */
