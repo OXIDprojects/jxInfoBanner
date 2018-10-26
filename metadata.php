@@ -2,14 +2,14 @@
 /**
  * Metadata version
  */
-$sMetadataVersion = '1.1';
+$sMetadataVersion = '2.0';
  
 /**
  * Module information
  * 
  * @link      https://github.com/job963/jx404Catcher
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
- * @copyright (C) Joachim Barthel 2016-2017
+ * @copyright (C) Joachim Barthel 2016-2018
  * 
  **/
 
@@ -27,7 +27,7 @@ $aModule = array(
                                 . '<li>Date specific display</ul>',
                         ),
     'thumbnail'    => 'jxinfobanner.png',
-    'version'      => '0.2.0',
+    'version'      => '0.3.0',
     'author'       => 'Joachim Barthel',
     'url'          => 'https://github.com/job963/jxInfoBanner',
     'email'        => 'jobarthel@gmail.com',
@@ -58,10 +58,6 @@ $aModule = array(
                                 'file'     => '/application/views/blocks/dd_layout_page_header.tpl'
                               )
                         ),
-    'events'       => array(
-                            'onActivate'   => 'jxinfobanner_events::onActivate', 
-                            'onDeactivate' => 'jxinfobanner_events::onDeactivate'
-                        ),
-   'settings'      => array(
+   'settings'       => array(
                         )
 );
