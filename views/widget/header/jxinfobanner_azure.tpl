@@ -63,7 +63,7 @@
     
     [{if $jxActiveCmsFound}]
         <div id="jxInfoBanner">
-            [{$oCont->oxcontents__oxcontent->value}]
+            [{oxcontent ident=$oCont->oxcontents__oxloadid->value}]
         </div>
     [{/if}]
 [{/if}]

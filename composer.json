@@ -1,8 +1,8 @@
 {
     "name": "jxmods/jxinfobanner",
-    "description": "jxInfoBanner - Display of Messages on Top of all Pages",
+    "description": "jxInfoBanner - Display Messages on Top of all Pages",
     "type": "oxideshop-module",
-    "keywords": ["oxid", "modules", "eShop"],
+    "keywords": ["oxid", "modules", "eShop", "frontend"],
     "homepage": "https://github.com/job963/jxInfoBanner",
     "authors": [
         {

@@ -5,7 +5,7 @@
 [{* Check if date specific banner exists and is active *}]
 [{oxifcontent ident=$jxInfobanner object="oCont"}]
     [{if $oCont->oxcontents__oxactive->value}]
-        [{assign var="jxActiveCmsFound" value=true}]
+            [{assign var="jxActiveCmsFound" value=true}]
     [{/if}]
 [{/oxifcontent}]
 
@@ -49,7 +49,7 @@
 [{if $jxActiveCmsFound}]
     <div id="jxInfoBanner">
         <div class="alert alert-warning">
-            [{$oCont->oxcontents__oxcontent->value}]
+            [{oxcontent ident=$oCont->oxcontents__oxloadid->value}]
         </div>
     </div>
 [{/if}]
